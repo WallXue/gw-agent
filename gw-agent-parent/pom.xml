@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.wall</groupId>
+    <artifactId>gw-agent-parent</artifactId>
+    <version>0.01</version>
+    <packaging>pom</packaging>
+
+    <name>Gw-agent parent POM</name>
+    <description>The Gw-agent parent POM.</description>
+    <url>http://www.lifeofpi.com.cn/</url>
+    <inceptionYear>2018</inceptionYear>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>wall.xue</id>
+            <name>Wall Xue</name>
+            <email>wall126126@gmail.com</email>
+            <timezone>+8</timezone>
+            <roles>
+                <role>Owner</role>
+                <role>Founder</role>
+                <role>Committer</role>
+            </roles>
+        </developer>
+    </developers>
+    <!--
+      <distributionManagement>
+        <snapshotRepository>
+          <id>sonatype-nexus-snapshots</id>
+          <name>Sonatype Nexus Snapshots</name>
+          <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+
+        <repository>
+          <id>sonatype-nexus-staging</id>
+          <name>Nexus Release Repository</name>
+          <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+      </distributionManagement> -->
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.build.resourceEncoding>UTF-8</project.build.resourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <javac.src.version>1.8</javac.src.version>
+        <javac.target.version>1.8</javac.target.version>
+        <maven.build.timestamp.format>yyyy-MM-dd HH:mm:ssZ</maven.build.timestamp.format>
+        <!--
+         | plugins configuration
+        -->
+        <javadoc.version>2.9</javadoc.version>
+        <surefire.version>2.13</surefire.version>
+        <findbugs.onlyAnalyze/>
+
+        <!--
+         | dependency version
+        -->
+        <netty.version>4.1.31.Final</netty.version>
+        <fastjson.version>1.2.54</fastjson.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>${netty.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>release</id>
+        </profile>
+    </profiles>
+
+</project>
