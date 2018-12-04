@@ -9,7 +9,7 @@
   
   #
   <small>
-  service->agent->agent->service
+  service <-> agent <-> agent <-> service
   
   service与agent，agent与agent之间都采用NIO单一长链接方式，并且支持双向开工
   
